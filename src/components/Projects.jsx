@@ -79,7 +79,7 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://crashpad.vercel.app'} 
-                      style={{"color":"#fe00c7", "textDecoration":"none"}}>
+                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
               Demo</Button>
               <Button onClick={() => window.location.href='https://github.com/timmyha/crashpad'} 
                       style={{"color":"#00d8fe", "textDecoration":"none"}}>
@@ -98,7 +98,7 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://github-search-timmyha.vercel.app'} 
-                      style={{"color":"#fe00c7", "textDecoration":"none"}}>
+                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
               Demo</Button>
               <Button onClick={() => window.location.href='https://github.com/timmyha/github-search'} 
                       style={{"color":"#00d8fe", "textDecoration":"none"}}>
@@ -118,7 +118,7 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://presentday.vercel.app'} 
-                      style={{"color":"#fe00c7", "textDecoration":"none"}}>
+                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
               Demo</Button>
               <Button onClick={() => window.location.href='https://github.com/timmyha/startpage'} 
                       style={{"color":"#00d8fe", "textDecoration":"none"}}>
