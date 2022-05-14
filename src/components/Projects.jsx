@@ -22,7 +22,7 @@ const Projects = ({ darkMode }) => {
   const controlBgColor = () => {
     window.scrollY > 100
       && setArrowShow(!arrowShow)
-    window.scrollY > 701
+    window.scrollY > 501
       && setShowProjects(!showProjects)
     window.scrollY > 500
       && setBgColor(`transparent`)
@@ -67,7 +67,7 @@ const Projects = ({ darkMode }) => {
           <GithubSearch />
           <PresentDay />
         </div>
-        : <div style={{ "opacity": "1", "transition": ".7s" }}>
+        : <div style={{ "opacity": "1", "transition": ".5s" }}>
           <Crash>
             <Crashpad />
             <Details>
@@ -144,7 +144,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100%;
   color: ${primaryText};
-  padding-top: 50px;
+  padding-top: 200px;
   padding-bottom: 30px;
   transition: .7s;`
 
