@@ -214,7 +214,11 @@ const Button = styled.div`
   padding: 10px;
   border-radius: 4px;
   margin-left: 10px;
-  cursor: pointer;`
+  cursor: pointer;
+    &:hover {
+      background-color: #555555;
+      transition: .2s;
+    }`
 
 const ProjectsArrow = styled.div`
   position: absolute;
