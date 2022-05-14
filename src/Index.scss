@@ -1,0 +1,84 @@
+@import url(
+  'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Rubik:wght@700&display=swap'
+  );
+
+$yellowlight: #dcfe006b;
+$yellowdark: #f0ff94;
+$bluelight: #00d8feb2;
+$bluedark: #00d8fe;
+$pinkheavy: #fe00c7;
+$primaryColor: black;
+$secondaryColor: white;
+$steps: 100;
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: rgb(220,254,0);
+background: linear-gradient(90deg, 
+          rgba(220,254,0,1) 22%, 
+          rgba(0,216,254,1) 36%,
+           rgba(17,201,250,1) 63%,
+            rgba(254,0,199,1) 88%);
+}
+
+input:focus {
+  outline: none !important;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+*::selection {
+  color: white;
+  background-color: rgba(254,0,199,1); 
+}
+
+.light {
+  text-decoration: none;
+  color: #333333;
+  transform: translate3d(-50%, -50%, 0);
+  background-image: linear-gradient(to bottom,
+      white 70%,
+      transparent 70%),
+    linear-gradient(to right,
+      $pinkheavy 33%,
+      $bluelight 33%,
+      $bluelight 66%,
+      $yellowlight 66%);
+  background-size: 306% 100%;
+  background-position: 100% 0;
+  transition: 1s background-position;
+
+  &:hover {
+    background-position: 0%;
+  }
+}
+
+.dark {
+  text-decoration: none;
+  color: transparent;
+  padding: 2px;
+  transform: translate3d(-50%, -50%, 0);
+  background: linear-gradient(to bottom,
+      #333333 0%,
+      transparent 0%),
+    linear-gradient(to right,
+      $pinkheavy 33%,
+      $bluedark 33%,
+      $bluedark 66%,
+      $yellowdark 66%);
+  background-size: 306% 100%;
+  background-position: 100% 0;
+  transition: 1s background-position;
+  background-clip: text;
+
+  &:hover {
+    background-position: 0%;
+  }
+}
