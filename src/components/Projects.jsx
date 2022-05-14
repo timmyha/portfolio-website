@@ -213,7 +213,8 @@ const Button = styled.div`
   background-color: #333333;
   padding: 10px;
   border-radius: 4px;
-  margin-left: 10px;`
+  margin-left: 10px;
+  cursor: pointer;`
 
 const ProjectsArrow = styled.div`
   position: absolute;
