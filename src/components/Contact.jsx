@@ -1,12 +1,42 @@
 import styled from 'styled-components'
+import { useState } from 'react'
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({ name: '', message: ''})
+
+  const onChange = (e) => {
+    let { value, id } = e.target;
+    setFormData(prev => (
+      {
+      ...prev,
+      [id]: value
+      }
+    ))
+  }
+
+  console.log(formData)
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    toast.success('contact initiated!')
+  }
   return (
+    <form onSubmit={() => onSubmit()}>
     <Container>
-      <Name placeholder="name" />
-      <Message placeholder="send me a message!" />
-      <Button>submit</Button>
+      <Name placeholder="name" 
+            id="name" 
+            onChange={onChange}
+            value={formData.name} />
+      <Message placeholder="send me a message!" 
+               id="message"
+               onChange={onChange}
+               value={formData.message} />
+      <Button type="submit" href={formData.message.length > 1 && `mailto:timhansher@gmail.com
+                                  ?Subject=new message from ${formData.name} via timmyha.vercel.app!
+                                  &body=${formData.message}`}>submit</Button>
     </Container>
+    </form>
   )
 }
 
@@ -57,12 +87,15 @@ const Name = styled.input`
       max-width: 360px;
     }`
 
-  const Button = styled.button`
+  const Button = styled.a`
     margin: auto;
     margin-top: 20px;
     width: 400px;
     border-radius: 3px;
     height: 40px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
     font-family: rubik;
     cursor: pointer;
     background-color: transparent;

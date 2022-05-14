@@ -7,6 +7,8 @@ import { GiMoon, GiStripedSun } from 'react-icons/gi'
 import { MdOutlineNightlightRound } from 'react-icons/md'
 import Contact from './components/Contact'
 import { FiLinkedin, FiGithub } from 'react-icons/fi'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -42,6 +44,17 @@ function App() {
       <Projects darkMode={darkMode} />
       <Contact />
       </Container>
+      <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+/>
     </ThemeProvider>
   )
 }
