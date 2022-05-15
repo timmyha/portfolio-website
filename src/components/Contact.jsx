@@ -24,6 +24,14 @@ const Contact = () => {
   return (
     <form onSubmit={() => onSubmit()}>
       <Container>
+        <Content>
+        <BlurbDiv href="#" className="contactblurb">
+          <span>i am always interested in opportunities, advice,
+          pro tips, compliments, tasteful insults, your favorite movies,
+          football manager&trade; tactics, or anything else you feel i need
+          to hear about.
+          e-mail me:</span>
+        </BlurbDiv>
         <FormDiv>
           <NameLabel for="name">name</NameLabel>
           <Name placeholder=""
@@ -39,6 +47,7 @@ const Contact = () => {
                                   ?Subject=new message from ${formData.name} via timmyha.vercel.app!
                                   &body=${formData.message}`}>submit</Button>
         </FormDiv>
+        </Content>
       </Container>
     </form>
   )
@@ -46,19 +55,58 @@ const Contact = () => {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 60vh;
+  height: 100vh;
   width: 100vw;
   padding-top: 80px;
   background-color: #111111;
+  @media (max-width: 900px) {
+    height : 120vh;
+  }
 `
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: auto;
+  justify-content: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 500px;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    width: 500px;
+  }
+  @media (max-width: 300px) {
+    flex-direction: column;
+    width: 500px;
+  }`
+
+const BlurbDiv = styled.a`
+  display: flex;
+  width: 350px;
+  text-align: justify;
+  font-size: 30px;
+  letter-spacing: -2px;
+  margin: auto;
+  font-family: IBM Plex Sans;
+  @media (max-width: 900px) {
+    margin-bottom: 30px;;
+  }
+  @media (min-width: 900px) {
+    margin-left: -20px;}`
 
 const FormDiv = styled.div`
   display: flex;
-  width: 400px;
+  width: 375px;
   margin: auto;
-  flex-direction: column;`
+  flex-direction: column;
+  @media (max-width: 900px) {
+  }
+  @media (min-width: 900px) {
+    margin-left: 50px;}`
 
 const NameLabel = styled.label`
   display: flex;
@@ -66,7 +114,7 @@ const NameLabel = styled.label`
   margin: auto;
   margin-bottom: -20px;
   font-size: 15px;
-  color: #fe00c7;
+  color: white;
   font-family: rubik;
   `
 
@@ -76,7 +124,7 @@ const MessageLabel = styled.label`
   margin: auto;
   margin-bottom: -20px;
   font-size: 15px;
-  color: #00d8fe;
+  color: white;
   font-family: rubik;
   `
 
@@ -86,7 +134,7 @@ const Name = styled.input`
   margin-top: 20px;
   margin-bottom: 5px;
   align-self: center;
-  width: 400px;
+  width: 375px;
   font-size: 20px;
   padding-left: 10px;
   text-align: left;
@@ -104,8 +152,8 @@ const Message = styled.textarea`
   height: 40px;
   margin-top: 20px;
   align-self: center;
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 375px;
+  min-width: 375px;
   height: 300px;
   font-size: 20px;
   padding-left: 10px;
@@ -124,7 +172,7 @@ const Message = styled.textarea`
 const Button = styled.a`
     margin: auto;
     margin-top: 20px;
-    width: 400px;
+    width: 375px;
     border-radius: 3px;
     height: 40px;
     text-align: center;

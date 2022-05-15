@@ -9,14 +9,21 @@ const Splash = ({ darkMode }) => {
   const film = `https://letterboxd.com/timmyha`
   const link = darkMode === true ? 'dark' : 'light'
 
+  const scrollToProjects = () => { 
+    window.scroll({
+      top: 1100, 
+      left: 0, 
+      behavior: 'smooth' 
+     });
+  }
+
   return (
     <ThemeProvider theme={darkMode
       ? { mode: 'dark' }
       : { mode: 'light' }}>
     <TitleContent>timothy hansher is a web
      developer in brooklyn, nyc who 
-    builds <a className={link} style={{"cursor":"pointer"}}
-             onClick={() => console.log('hi')}>apps</a>, 
+    builds <a className={link} onClick={scrollToProjects} style={{"cursor":"pointer"}}>apps</a>, 
     tweets his inner <a className={link} href={thoughts}>thoughts</a>, 
     snaps <a className={link} href={photos}>photos</a>, and logs
     every <a className={link} href={film}>film</a> he watches. 
@@ -37,7 +44,7 @@ const TitleContent = styled.div`
   max-width: 500px;
   color: ${primaryText};
   line-height: 70px;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   margin: auto;
   padding-top: 200px;
     @media(max-width: 550px) {

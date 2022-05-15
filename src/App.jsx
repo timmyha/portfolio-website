@@ -6,7 +6,7 @@ import theme from 'styled-theming'
 import { GiMoon, GiStripedSun } from 'react-icons/gi'
 import { MdOutlineNightlightRound } from 'react-icons/md'
 import Contact from './components/Contact'
-import { FiLinkedin, FiGithub } from 'react-icons/fi'
+import { FiLinkedin, FiGithub, FiMail} from 'react-icons/fi'
 
 
 function App() {
@@ -15,6 +15,14 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
+  }
+
+  const scrollToContact = () => { 
+    window.scroll({
+      top: 3000, 
+      left: 0, 
+      behavior: 'smooth' 
+     });
   }
 
   return (
@@ -34,6 +42,8 @@ function App() {
         &nbsp;&nbsp;&nbsp;<a href="https://github.com/timmyha">
         <FiGithub style={darkMode ? {"color":"#dcfe00f9"} : {"color":"#333333"}} />
         </a>
+        &nbsp;&nbsp;&nbsp;
+        <FiMail onClick={scrollToContact} style={darkMode ? {"color":"#dcfe00f9"} : {"color":"#333333"}} />
       </Socials>
       <Container>
       <Main>
