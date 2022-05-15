@@ -78,11 +78,14 @@ const Projects = ({ darkMode }) => {
                 <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiFirebase />&nbsp;<SiVite />
               </Icons>
               <Links>
+              
               <Button onClick={() => window.location.href='http://crashpad.vercel.app'} 
-                      style={{"textDecoration":"none"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                      "color": "#333333"} : {"textDecoration":"none"}}>
               Demo</Button>
               <GitButton onClick={() => window.location.href='https://github.com/timmyha/crashpad'} 
-                      style={{"textDecoration":"none", "fontSize": "35px"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
               <AiFillGithub /></GitButton>
               </Links>
             </Details>
@@ -98,10 +101,12 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://github-search-timmyha.vercel.app'} 
-                      style={{"textDecoration":"none"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                                         "color": "#333333"} : {"textDecoration":"none"}}>
               Demo</Button>
               <GitButton onClick={() => window.location.href='https://github.com/timmyha/github-search'} 
-                      style={{"fontSize": "35px", "textDecoration":"none"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
               <AiFillGithub /></GitButton>
               </Links>
             </Details>
@@ -118,10 +123,12 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://presentday.vercel.app'} 
-                      style={{"textDecoration":"none"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                      "color": "#333333"} : {"textDecoration":"none"}}>
               Demo</Button>
               <GitButton onClick={() => window.location.href='https://github.com/timmyha/startpage'} 
-                      style={{"fontSize": "35px", "textDecoration":"none"}}>
+                      style={darkMode ? {"backgroundColor" : "#f0ff94",
+                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
               <AiFillGithub /></GitButton>
               </Links>
             </Details>
@@ -210,25 +217,8 @@ const Links = styled.span`
 
 const Button = styled.div`
   border: 1px solid #333333;
-  background-color: #333333;
   padding: 10px;
   padding-top: 17px;
-  color: #00d8fe;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
-    &:hover {
-      background-color: #00d8fe;
-      color: #333333;
-      transition: .2s;
-    }`
-
-const GitButton = styled.div`
-  border: 1px solid #333333;
-  background-color: transparent;
-  padding-top: 8px;
-  padding-right: 6px;
-  padding-left: 6px;
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
@@ -237,6 +227,25 @@ const GitButton = styled.div`
       background-color: #333333;
       color: #00d8fe;
       transition: .2s;
+      opacity: .9;
+    }`
+
+const GitButton = styled.div`
+  border: 1px solid #333333;
+  background-color: transparent;
+  padding-top: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 35px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+    &:hover {
+      border-color: #333333;
+      background-color: #333333;
+      color: #00d8fe;
+      transition: .2s;
+      opacity: .9;
     }`
 
 const ProjectsArrow = styled.div`
