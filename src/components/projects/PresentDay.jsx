@@ -54,7 +54,6 @@ const BrowserWindow = styled.div`
   margin: auto;
   margin-top: 0px;
   border: 2px;
-  cursor: pointer;
   border-color: #333333;
   border-style: solid;
   border-radius: 0px 0px 5px 5px;
