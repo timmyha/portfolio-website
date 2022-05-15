@@ -41,7 +41,7 @@ const TitleContent = styled.div`
   text-align: justify;
   font-family: IBM Plex Sans;
   font-size: 45px;
-  max-width: 500px;
+  max-width: 520px;
   color: ${primaryText};
   line-height: 70px;
   letter-spacing: -2px;
@@ -49,7 +49,7 @@ const TitleContent = styled.div`
   padding-top: 200px;
     @media(max-width: 550px) {
       font-size: 30px;
-      width: 350px;
+      width: 320px;
     }`
 
 export default Splash
