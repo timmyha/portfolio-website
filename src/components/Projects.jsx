@@ -6,7 +6,7 @@ import GithubSearch from './projects/GithubSearch'
 import PresentDay from './projects/PresentDay'
 import { FaReact, FaJs, FaCss3 } from 'react-icons/fa'
 import { SiStyledcomponents } from 'react-icons/si'
-import { SiFirebase, SiVite } from 'react-icons/si'
+import { SiFirebase, SiVite, SiDuckduckgo } from 'react-icons/si'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styled-theming'
 import { AiFillGithub } from 'react-icons/ai'
@@ -79,11 +79,11 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://crashpad.vercel.app'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
+                      style={{"textDecoration":"none"}}>
               Demo</Button>
-              <Button onClick={() => window.location.href='https://github.com/timmyha/crashpad'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
-              <AiFillGithub /></Button>
+              <GitButton onClick={() => window.location.href='https://github.com/timmyha/crashpad'} 
+                      style={{"textDecoration":"none", "fontSize": "35px"}}>
+              <AiFillGithub /></GitButton>
               </Links>
             </Details>
           </Crash>
@@ -98,11 +98,11 @@ const Projects = ({ darkMode }) => {
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://github-search-timmyha.vercel.app'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
+                      style={{"textDecoration":"none"}}>
               Demo</Button>
-              <Button onClick={() => window.location.href='https://github.com/timmyha/github-search'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
-              <AiFillGithub /></Button>
+              <GitButton onClick={() => window.location.href='https://github.com/timmyha/github-search'} 
+                      style={{"fontSize": "35px", "textDecoration":"none"}}>
+              <AiFillGithub /></GitButton>
               </Links>
             </Details>
           </Reverse>
@@ -114,15 +114,15 @@ const Projects = ({ darkMode }) => {
                 to bookmarks and smarter searching.
               </Desc>
               <Icons>
-              <FaJs />&nbsp;<FaReact />&nbsp;<FaCss3 />
+              <FaJs />&nbsp;<FaReact />&nbsp;<FaCss3 />&nbsp;<SiDuckduckgo />
               </Icons>
               <Links>
               <Button onClick={() => window.location.href='http://presentday.vercel.app'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
+                      style={{"textDecoration":"none"}}>
               Demo</Button>
-              <Button onClick={() => window.location.href='https://github.com/timmyha/startpage'} 
-                      style={{"color":"#00d8fe", "textDecoration":"none"}}>
-              <AiFillGithub /></Button>
+              <GitButton onClick={() => window.location.href='https://github.com/timmyha/startpage'} 
+                      style={{"fontSize": "35px", "textDecoration":"none"}}>
+              <AiFillGithub /></GitButton>
               </Links>
             </Details>
           </Crash>
@@ -209,14 +209,33 @@ const Links = styled.span`
   text-align: center;`
 
 const Button = styled.div`
-  border: none;
+  border: 1px solid #333333;
   background-color: #333333;
   padding: 10px;
+  padding-top: 17px;
+  color: #00d8fe;
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
     &:hover {
-      background-color: #555555;
+      background-color: #00d8fe;
+      color: #333333;
+      transition: .2s;
+    }`
+
+const GitButton = styled.div`
+  border: 1px solid #333333;
+  background-color: transparent;
+  padding-top: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+    &:hover {
+      border-color: #333333;
+      background-color: #333333;
+      color: #00d8fe;
       transition: .2s;
     }`
 

@@ -3,14 +3,14 @@ import { useState } from 'react'
 
 const Contact = () => {
 
-  const [formData, setFormData] = useState({ name: '', message: ''})
+  const [formData, setFormData] = useState({ name: '', message: '' })
 
   const onChange = (e) => {
     let { value, id } = e.target;
     setFormData(prev => (
       {
-      ...prev,
-      [id]: value
+        ...prev,
+        [id]: value
       }
     ))
   }
@@ -23,19 +23,23 @@ const Contact = () => {
   }
   return (
     <form onSubmit={() => onSubmit()}>
-    <Container>
-      <Name placeholder="name" 
-            id="name" 
+      <Container>
+        <FormDiv>
+          <NameLabel for="name">name</NameLabel>
+          <Name placeholder=""
+            id="name"
             onChange={onChange}
             value={formData.name} />
-      <Message placeholder="send me a message!" 
-               id="message"
-               onChange={onChange}
-               value={formData.message} />
-      <Button type="submit" href={formData.message.length > 1 && `mailto:timhansher@gmail.com
+            <MessageLabel for="message">message</MessageLabel>
+          <Message placeholder=""
+            id="message"
+            onChange={onChange}
+            value={formData.message} />
+          <Button type="submit" href={formData.message.length > 1 && `mailto:timhansher@gmail.com
                                   ?Subject=new message from ${formData.name} via timmyha.vercel.app!
                                   &body=${formData.message}`}>submit</Button>
-    </Container>
+        </FormDiv>
+      </Container>
     </form>
   )
 }
@@ -50,14 +54,42 @@ const Container = styled.div`
   background-color: #111111;
 `
 
+const FormDiv = styled.div`
+  display: flex;
+  width: 400px;
+  margin: auto;
+  flex-direction: column;`
+
+const NameLabel = styled.label`
+  display: flex;
+  width: 100%;
+  margin: auto;
+  margin-bottom: -20px;
+  font-size: 15px;
+  color: #fe00c7;
+  font-family: rubik;
+  `
+
+const MessageLabel = styled.label`
+  display: flex;
+  width: 100%;
+  margin: auto;
+  margin-bottom: -20px;
+  font-size: 15px;
+  color: #00d8fe;
+  font-family: rubik;
+  `
+
 const Name = styled.input`
   display: flex;
   height: 40px;
   margin-top: 20px;
+  margin-bottom: 5px;
   align-self: center;
   width: 400px;
-  font-size: 30px;
-  text-align: center;
+  font-size: 20px;
+  padding-left: 10px;
+  text-align: left;
   border-radius: 3px;
   border: 1px #fe00c7 solid;
   background-color: transparent;
@@ -67,7 +99,7 @@ const Name = styled.input`
     width: 360px;
   }`
 
-  const Message = styled.textarea`
+const Message = styled.textarea`
   display: flex;
   height: 40px;
   margin-top: 20px;
@@ -75,8 +107,10 @@ const Name = styled.input`
   max-width: 400px;
   min-width: 400px;
   height: 300px;
-  font-size: 30px;
-  text-align: center;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  text-align: left;
   border-radius: 3px;
   border: 1px #00d8fe solid ;
   background-color: transparent;
@@ -87,7 +121,7 @@ const Name = styled.input`
       max-width: 360px;
     }`
 
-  const Button = styled.a`
+const Button = styled.a`
     margin: auto;
     margin-top: 20px;
     width: 400px;
