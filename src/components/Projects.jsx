@@ -110,8 +110,8 @@ const Projects = ({ darkMode }) => {
             <PresentDay />
             <Details>
               <Desc>
-                A browser new-tab dashboard granting quick access to bookmarks and
-                smart searching.
+                A browser new-tab dashboard granting quick access 
+                to bookmarks and smarter searching.
               </Desc>
               <Icons>
               <FaJs />&nbsp;<FaReact />&nbsp;<FaCss3 />
