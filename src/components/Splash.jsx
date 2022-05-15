@@ -11,7 +11,7 @@ const Splash = ({ darkMode }) => {
 
   const scrollToProjects = () => { 
     window.scroll({
-      top: 1100, 
+      top: 1000, 
       left: 0, 
       behavior: 'smooth' 
      });

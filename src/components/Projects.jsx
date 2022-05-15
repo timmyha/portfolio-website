@@ -38,6 +38,14 @@ const Projects = ({ darkMode }) => {
     };
   }, []);
 
+  const scrollToProjects = () => { 
+    window.scroll({
+      top: 1000, 
+      left: 0, 
+      behavior: 'smooth' 
+     });
+  }
+
   const projectColor = darkMode ? "#333333" : "white"
 
   return (
@@ -49,6 +57,7 @@ const Projects = ({ darkMode }) => {
         ? { "background": `${darkBgColor}` }
         : { "background": `${bgColor}` }}>
       <ProjectsArrow
+        onClick={scrollToProjects}
         style={arrowShow
           ? { "display": "flex", "color": `${projectColor}` }
           : { "opacity": "0", }}>
@@ -255,6 +264,7 @@ const ProjectsArrow = styled.div`
   font-size: 20px;
   font-family: rubik;
   opacity: 1;
-  transition: .5s;`
+  transition: .5s;
+  cursor: pointer;`
 
 export default Projects
