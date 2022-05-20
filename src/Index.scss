@@ -73,7 +73,8 @@ textarea:focus {
       $pinkheavy 33%,
       $bluedark 33%,
       $bluedark 66%,
-      $yellowdark 66%);
+      $yellowdark 66%,
+      $yellowdark 100%);
   background-size: 306% 100%;
   background-position: 100% 0;
   transition: 1s background-position;
@@ -89,7 +90,7 @@ textarea:focus {
   display: flex;
   cursor: crosshair;
   text-decoration: none;
-  color: transparent;
+  color: $yellowdark;
   padding: 2px;
   transform: translate3d(0%, 0%, 0);
   background: linear-gradient(to bottom,
