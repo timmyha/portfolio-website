@@ -104,7 +104,7 @@ const Projects = ({ darkMode }) => {
             <Crashpad />
             <Details>
               <Desc>
-                Crashpad, a marketplace providing short-term housing for vagrants.
+                Crashpad, a marketplace providing short-term housing for wayward travellers.
               </Desc>
               <Icons>
                 <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiFirebase />&nbsp;<SiVite />
