@@ -82,8 +82,8 @@ const Projects = ({ darkMode }) => {
             <Sorry />
             <Details>
               <Desc>
-              Phone-in hotline using Twilio's Programmable Voice API, with an answering
-              machine for recording playback.
+              An answering machine that plays user apologies received from a hotline
+              set up with Twilio's Programmable Voice API.
               </Desc>
               <Icons>
               <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiExpress />&nbsp;<SiFirebase />&nbsp;<SiTwilio />&nbsp;<SiVite />
