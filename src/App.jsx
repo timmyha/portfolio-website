@@ -36,10 +36,10 @@ function App() {
             : <MdOutlineNightlightRound style={{"color":"black"}} />}
       </Button>
       <Socials>
-        <a href="https://www.linkedin.com/in/timothyhansher000/">
+        <a href="https://www.linkedin.com/in/timothyhansher000/" target="_blank">
         <FiLinkedin style={darkMode ? {"color":"#dcfe00f9"} : {"color":"#333333"}} />
         </a>
-        &nbsp;&nbsp;&nbsp;<a href="https://github.com/timmyha">
+        &nbsp;&nbsp;&nbsp;<a href="https://github.com/timmyha" target="_blank">
         <FiGithub style={darkMode ? {"color":"#dcfe00f9"} : {"color":"#333333"}} />
         </a>
         &nbsp;&nbsp;&nbsp;
