@@ -83,7 +83,7 @@ const Projects = ({ darkMode }) => {
             <Details>
               <Desc>
               An answering machine that plays user apologies received from a hotline
-              set up with Twilio's Programmable Voice API.
+              utilizing Twilio's Programmable Voice API.
               </Desc>
               <Icons>
               <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiExpress />&nbsp;<SiFirebase />&nbsp;<SiTwilio />&nbsp;<SiVite />
@@ -259,7 +259,7 @@ const Button = styled.div`
       background-color: #333333;
       color: #00d8fe;
       transition: .2s;
-      opacity: .9;
+      opacity: .8;
     }`
 
 const GitButton = styled.div`
