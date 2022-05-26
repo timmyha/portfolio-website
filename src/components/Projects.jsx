@@ -86,7 +86,7 @@ const Projects = ({ darkMode }) => {
               utilizing Twilio's Programmable Voice API.
               </Desc>
               <Icons>
-              <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiExpress />&nbsp;<SiFirebase />&nbsp;<SiTwilio />&nbsp;<SiVite />
+              <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiExpress />&nbsp;<SiFirebase />&nbsp;<SiTwilio />
               </Icons>
               <Links>
               <Button onClick={() => window.open('http://imsorry.vercel.app')} 
