@@ -5,12 +5,8 @@ import Crashpad from './projects/Crashpad'
 import GithubSearch from './projects/GithubSearch'
 import PresentDay from './projects/PresentDay'
 import Sorry from './projects/Sorry'
-import { FaReact, FaJs, FaCss3 } from 'react-icons/fa'
-import { SiStyledcomponents, SiTwilio, SiExpress } from 'react-icons/si'
-import { SiFirebase, SiVite, SiDuckduckgo } from 'react-icons/si'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styled-theming'
-import { AiFillGithub } from 'react-icons/ai'
 
 
 const Projects = ({ darkMode }) => {
@@ -39,135 +35,50 @@ const Projects = ({ darkMode }) => {
     };
   }, []);
 
-  const scrollToProjects = () => { 
+  const scrollToProjects = () => {
     window.scroll({
-      top: 1000, 
-      left: 0, 
-      behavior: 'smooth' 
-     });
+      top: 1000,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   const projectColor = darkMode ? "#333333" : "white"
 
   return (
-    <ThemeProvider theme={darkMode
+    <ThemeProvider theme={ darkMode
       ? { mode: 'dark' }
       : { mode: 'light' }}>
-    <Container
-      style={darkMode
-        ? { "background": `${darkBgColor}` }
-        : { "background": `${bgColor}` }}>
-      <ProjectsArrow
-        onClick={scrollToProjects}
-        style={arrowShow
-          ? { "display": "flex", "color": `${projectColor}` }
-          : { "opacity": "0", }}>
-        projects <AiOutlineArrowDown
-          style={{
-            "position": "absolute",
-            "bottom": "2px",
-            "left": "100px"
-          }} />
-      </ProjectsArrow>
-      {showProjects
-        ? <div style={{ "opacity": "0" }}>
-          <Crash>
-            <Crashpad />
-          </Crash>
-          <GithubSearch />
-          <PresentDay />
-        </div>
-        : <div style={{ "opacity": "1", "transition": ".5s" }}>
-          <Reverse>
-            <Sorry />
-            <Details>
-              <Desc>
-              An answering machine that plays user apologies received from a hotline
-              utilizing Twilio's Programmable Voice API.
-              </Desc>
-              <Icons>
-              <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiExpress />&nbsp;<SiFirebase />&nbsp;<SiTwilio />
-              </Icons>
-              <Links>
-              <Button onClick={() => window.open('http://imsorry.vercel.app')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                                         "color": "#333333"} : {"textDecoration":"none"}}>
-              Demo</Button>
-              <GitButton onClick={() => window.open('https://github.com/catmcclelland/another-apology-line')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
-              <AiFillGithub /></GitButton>
-              </Links>
-            </Details>
-          </Reverse>
-          <Crash>
-            <Crashpad />
-            <Details>
-              <Desc>
-                Crashpad, a marketplace providing short-term housing for wayward travelers.
-              </Desc>
-              <Icons>
-                <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiFirebase />&nbsp;<SiVite />
-              </Icons>
-              <Links>
-              
-              <Button onClick={() => window.open('http://crashpad.vercel.app')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333"} : {"textDecoration":"none"}}>
-              Demo</Button>
-              <GitButton onClick={() => window.open('https://github.com/timmyha/crashpad')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
-              <AiFillGithub /></GitButton>
-              </Links>
-            </Details>
-          </Crash>
-          <Reverse>
-            <GithubSearch />
-            <Details>
-              <Desc>
-              Search users and view profiles via the Github API.
-              </Desc>
-              <Icons>
-              <FaJs />&nbsp;<FaReact />&nbsp;<SiStyledcomponents />&nbsp;<SiVite />
-              </Icons>
-              <Links>
-              <Button onClick={() => window.open('http://github-search-timmyha.vercel.app')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                                         "color": "#333333"} : {"textDecoration":"none"}}>
-              Demo</Button>
-              <GitButton onClick={() => window.open('https://github.com/timmyha/github-search')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
-              <AiFillGithub /></GitButton>
-              </Links>
-            </Details>
-          </Reverse>
-          <Crash>
-            <PresentDay />
-            <Details>
-              <Desc>
-                A browser new-tab dashboard granting quick access 
-                to bookmarks and smarter searching.
-              </Desc>
-              <Icons>
-              <FaJs />&nbsp;<FaReact />&nbsp;<FaCss3 />&nbsp;<SiDuckduckgo />
-              </Icons>
-              <Links>
-              <Button onClick={() => window.open('http://presentday.vercel.app')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333"} : {"textDecoration":"none"}}>
-              Demo</Button>
-              <GitButton onClick={() => window.open('https://github.com/timmyha/startpage')} 
-                      style={darkMode ? {"backgroundColor" : "#f0ff94",
-                      "color": "#333333", "fontSize":"35px"} : {"textDecoration":"none"}}>
-              <AiFillGithub /></GitButton>
-              </Links>
-            </Details>
-          </Crash>
-        </div>
-      }
-    </Container>
+      <Container
+        style={darkMode
+          ? { "background": `${darkBgColor}` }
+          : { "background": `${bgColor}` }}>
+        <ProjectsArrow
+          onClick={scrollToProjects}
+          style={arrowShow
+            ? { "display": "flex", "color": `${projectColor}` }
+            : { "opacity": "0", }}>
+          projects <AiOutlineArrowDown
+            style={{
+              "position": "absolute",
+              "bottom": "2px",
+              "left": "100px"
+            }} />
+        </ProjectsArrow>
+        { showProjects
+          ? <div style={{ "opacity": "0" }}>
+              <Crashpad />
+              <GithubSearch />
+              <PresentDay />
+          </div>
+          : <div style={{ "opacity": "1", "transition": ".5s" }}>
+              <Crashpad darkMode={darkMode} />
+              <GithubSearch darkMode={darkMode} />
+              <Sorry darkMode={darkMode} />
+              <PresentDay darkMode={darkMode} />
+          </div>
+        }
+      </Container>
     </ThemeProvider>
   )
 }
@@ -197,87 +108,6 @@ const Crash = styled.div`
     @media (max-width: 700px) {
       flex-direction: column;
       width: 100vw;
-    }`
-
-const Reverse = styled.div`
-    display: flex;
-    flex-direction: row-reverse;
-    width: 700px;
-    margin: auto;
-    margin-bottom: 100px;
-      @media (max-width: 700px) {
-        flex-direction: column;
-        width: 100vw;
-      }`
-
-const Details = styled.div`
-display: flex;
-flex-direction: column;
-margin: auto;
-justify-content: center;`
-
-const Desc = styled.span`
-  display: flex;
-  font-size: 30px;
-  font-family: IBM Plex Sans;
-  width: 370px;
-  margin: auto;
-  align-self: center;
-  text-align: center;
-    @media (max-width: 500px) {
-      margin: auto;
-  }`
-
-const Icons = styled.span`
-  font-size: 30px;
-  font-family: IBM Plex Sans;
-  width: 370px;
-  padding-top: 20px;
-  text-align: center;
-    @media (max-width: 500px) {
-      margin: auto;
-  }`
-
-const Links = styled.span`
-  display: flex;
-  font-size: 15px;
-  font-family: IBM Plex Sans;
-  margin: auto;
-  margin-top: 20px;
-  align-self: center;
-  text-align: center;`
-
-const Button = styled.div`
-  border: 1px solid #333333;
-  padding: 10px;
-  padding-top: 17px;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
-    &:hover {
-      border-color: #333333;
-      background-color: #333333;
-      color: #00d8fe;
-      transition: .2s;
-      opacity: .8;
-    }`
-
-const GitButton = styled.div`
-  border: 1px solid #333333;
-  background-color: transparent;
-  padding-top: 8px;
-  padding-right: 6px;
-  padding-left: 6px;
-  font-size: 35px;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
-    &:hover {
-      border-color: #333333;
-      background-color: #333333;
-      color: #00d8fe;
-      transition: .2s;
-      opacity: .9;
     }`
 
 const ProjectsArrow = styled.div`

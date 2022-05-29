@@ -74,7 +74,7 @@ const Container = styled.div`
 
 const Main = styled.div`
   background-color: ${mainBgColor};
-  width: 100vw;
+  width: 100%;
   height: 96vh;
   margin: 0px;
   margin-top: 4px;

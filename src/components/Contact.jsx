@@ -56,12 +56,12 @@ const Contact = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 92vh;
   width: 100vw;
   padding-top: 80px;
   background-color: #111111;
   @media (max-width: 900px) {
-    height : 120vh;
+    height : 92vh;
   }
 `
 
@@ -115,7 +115,7 @@ const NameLabel = styled.label`
   margin-bottom: -20px;
   font-size: 15px;
   color: white;
-  font-family: rubik;
+  font-family: Roboto;
   `
 
 const MessageLabel = styled.label`
@@ -125,7 +125,7 @@ const MessageLabel = styled.label`
   margin-bottom: -20px;
   font-size: 15px;
   color: white;
-  font-family: rubik;
+  font-family: Roboto;
   `
 
 const Name = styled.input`
@@ -139,10 +139,10 @@ const Name = styled.input`
   padding-left: 10px;
   text-align: left;
   border-radius: 3px;
-  border: 1px #fe00c7 solid;
+  border: .1px #fe00c7 solid;
   background-color: transparent;
   color: #fe00c7;
-  font-family: rubik;
+  font-family: Roboto;
     @media (max-width: 500px) {
     width: 360px;
   }`
@@ -160,10 +160,10 @@ const Message = styled.textarea`
   padding-top: 10px;
   text-align: left;
   border-radius: 3px;
-  border: 1px #00d8fe solid ;
+  border: .1px #00d8fe solid ;
   background-color: transparent;
   color: #00d8fe;
-  font-family: rubik;
+  font-family: Roboto;
     @media (max-width: 500px) {
       min-width: 360px;
       max-width: 360px;
@@ -178,10 +178,10 @@ const Button = styled.a`
     text-align: center;
     text-decoration: none;
     line-height: 40px;
-    font-family: rubik;
+    font-family: Roboto;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid rgba(220,254,0,1);
+    border: .1px solid rgba(220,254,0,1);
     color: rgba(220,254,0,1);
       &:hover {
         background-color: rgba(220,254,0,1);
