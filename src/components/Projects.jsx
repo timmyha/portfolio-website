@@ -72,9 +72,9 @@ const Projects = ({ darkMode }) => {
               <PresentDay />
           </div>
           : <div style={{ "opacity": "1", "transition": ".5s" }}>
+              <Sorry darkMode={darkMode} />
               <Crashpad darkMode={darkMode} />
               <GithubSearch darkMode={darkMode} />
-              <Sorry darkMode={darkMode} />
               <PresentDay darkMode={darkMode} />
           </div>
         }
