@@ -7,6 +7,7 @@ This is my portfolio, initial inspiration came from the navbar on vimeo.com/watc
 #### tools
 
 - ReactJs
+- Sass
 - styled-components
 - Spotify API
 - react-icons
