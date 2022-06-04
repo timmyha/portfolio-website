@@ -82,7 +82,7 @@ const Content = styled.div`
   }
   @media (max-width: 300px) {
     flex-direction: column;
-    width: 500px;
+    width: 300px;
   }`
 
 const BlurbDiv = styled.a`
@@ -102,7 +102,7 @@ const BlurbDiv = styled.a`
 
 const FormDiv = styled.div`
   display: flex;
-  width: 375px;
+  width: 350px;
   margin: auto;
   flex-direction: column;
   @media (max-width: 900px) {
