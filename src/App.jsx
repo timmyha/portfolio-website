@@ -19,7 +19,7 @@ function App() {
 
   const scrollToContact = () => { 
     window.scroll({
-      top: 30000, 
+      top: 9999, 
       left: 0, 
       behavior: 'smooth' 
      });
