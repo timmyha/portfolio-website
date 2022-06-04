@@ -78,7 +78,7 @@ const Content = styled.div`
   }
   @media (max-width: 500px) {
     flex-direction: column;
-    width: 500px;
+    width: 300px;
   }
   @media (max-width: 300px) {
     flex-direction: column;
