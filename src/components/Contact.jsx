@@ -58,10 +58,11 @@ const Container = styled.div`
   justify-content: center;
   height: 92vh;
   width: 100vw;
+  padding-bottom: 0px;
   padding-top: 80px;
   background-color: #111111;
   @media (max-width: 900px) {
-    height : 92vh;
+    height : 100vh;
   }
 `
 
@@ -93,7 +94,8 @@ const BlurbDiv = styled.a`
   margin: auto;
   font-family: IBM Plex Sans;
   @media (max-width: 900px) {
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+    font-size: 20px;
   }
   @media (min-width: 900px) {
     margin-left: -20px;}`
@@ -134,7 +136,7 @@ const Name = styled.input`
   margin-top: 20px;
   margin-bottom: 5px;
   align-self: center;
-  width: 375px;
+  width: 355px;
   font-size: 20px;
   padding-left: 10px;
   text-align: left;
@@ -144,7 +146,7 @@ const Name = styled.input`
   color: #fe00c7;
   font-family: Roboto;
     @media (max-width: 500px) {
-    width: 360px;
+    width: 350px;
   }`
 
 const Message = styled.textarea`
@@ -152,8 +154,8 @@ const Message = styled.textarea`
   height: 40px;
   margin-top: 20px;
   align-self: center;
-  max-width: 375px;
-  min-width: 375px;
+  max-width: 350px;
+  min-width: 350px;
   height: 300px;
   font-size: 20px;
   padding-left: 10px;
@@ -165,14 +167,14 @@ const Message = styled.textarea`
   color: #00d8fe;
   font-family: Roboto;
     @media (max-width: 500px) {
-      min-width: 360px;
-      max-width: 360px;
+      min-width: 350px;
+      max-width: 350px;
     }`
 
 const Button = styled.a`
     margin: auto;
     margin-top: 20px;
-    width: 375px;
+    width: 350px;
     border-radius: 3px;
     height: 40px;
     text-align: center;
