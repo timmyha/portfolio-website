@@ -106,6 +106,7 @@ const FormDiv = styled.div`
   margin: auto;
   flex-direction: column;
   @media (max-width: 900px) {
+    margin-left: 0px;
   }
   @media (min-width: 900px) {
     margin-left: 50px;}`
@@ -147,6 +148,7 @@ const Name = styled.input`
   font-family: Roboto;
     @media (max-width: 500px) {
     width: 350px;
+    padding-left: 0px;
   }`
 
 const Message = styled.textarea`
@@ -169,6 +171,7 @@ const Message = styled.textarea`
     @media (max-width: 500px) {
       min-width: 350px;
       max-width: 350px;
+      padding-left: 0px;
     }`
 
 const Button = styled.a`
