@@ -58,7 +58,7 @@ const Container = styled.div`
   justify-content: center;
   height: 92vh;
   width: 100vw;
-  padding-bottom: 0px;
+  padding-bottom: 100px;
   padding-top: 80px;
   background-color: #111111;
   @media (max-width: 900px) {
@@ -83,7 +83,7 @@ const Content = styled.div`
   @media (max-width: 500px) {
     flex-direction: column;
     width: 300px;
-    margin-left: 15px;
+    margin-left: 10px;
   }
   @media (max-width: 300px) {
     flex-direction: column;
