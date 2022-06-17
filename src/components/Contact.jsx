@@ -83,7 +83,7 @@ const Content = styled.div`
   @media (max-width: 500px) {
     flex-direction: column;
     width: 300px;
-    margin-left: 10px;
+    margin-left: 12px;
   }
   @media (max-width: 300px) {
     flex-direction: column;
