@@ -58,7 +58,6 @@ const Container = styled.div`
   justify-content: center;
   height: 92vh;
   width: 100vw;
-  padding-bottom: 100px;
   padding-top: 80px;
   background-color: #111111;
   @media (max-width: 900px) {
