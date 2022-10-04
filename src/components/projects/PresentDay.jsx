@@ -1,20 +1,23 @@
-import styled from 'styled-components'
-import Icon from './icons/presentday.png'
-import { FaReact, FaJs, FaCss3 } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
-import { SiDuckduckgo } from 'react-icons/si'
+import styled from "styled-components";
+import Icon from "./icons/presentday.png";
+import { FaReact, FaJs, FaCss3 } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { SiDuckduckgo } from "react-icons/si";
 
 const PresentDay = ({ darkMode }) => {
   return (
     <Crash>
       <Container>
         <Browser>
-          <BrowserTitle><Circle /></BrowserTitle>
+          <BrowserTitle>
+            <Circle />
+          </BrowserTitle>
           <BrowserWindow>
-            <img style={{
-              "width": "100%",
-              "borderRadius": "0px 0px 5px 5px"
-            }}
+            <img
+              style={{
+                width: "100%",
+                borderRadius: "0px 0px 5px 5px",
+              }}
               className="preview"
               src={Icon}
             />
@@ -23,30 +26,51 @@ const PresentDay = ({ darkMode }) => {
       </Container>
       <Details>
         <Desc>
-          A browser new-tab dashboard granting quick access
-          to bookmarks and smarter searching.
+          A browser new-tab dashboard granting quick access to bookmarks and
+          smarter searching.
         </Desc>
         <Icons>
-          <FaJs />&nbsp;<FaReact />&nbsp;<FaCss3 />&nbsp;<SiDuckduckgo />
+          <FaJs />
+          &nbsp;
+          <FaReact />
+          &nbsp;
+          <FaCss3 />
+          &nbsp;
+          <SiDuckduckgo />
         </Icons>
         <Links>
-          <Button onClick={() => window.open('http://presentday.vercel.app')}
-            style={darkMode ? {
-              "backgroundColor": "#f0ff94",
-              "color": "#333333"
-            } : { "textDecoration": "none" }}>
-            Demo</Button>
-          <GitButton onClick={() => window.open('https://github.com/timmyha/startpage')}
-            style={darkMode ? {
-              "backgroundColor": "#f0ff94",
-              "color": "#333333", "fontSize": "35px"
-            } : { "textDecoration": "none" }}>
-            <AiFillGithub /></GitButton>
+          <Button
+            onClick={() => window.open("http://prefix.vercel.app")}
+            style={
+              darkMode
+                ? {
+                    backgroundColor: "#f0ff94",
+                    color: "#333333",
+                  }
+                : { textDecoration: "none" }
+            }
+          >
+            Demo
+          </Button>
+          <GitButton
+            onClick={() => window.open("https://github.com/timmyha/prefix")}
+            style={
+              darkMode
+                ? {
+                    backgroundColor: "#f0ff94",
+                    color: "#333333",
+                    fontSize: "35px",
+                  }
+                : { textDecoration: "none" }
+            }
+          >
+            <AiFillGithub />
+          </GitButton>
         </Links>
       </Details>
     </Crash>
-  )
-}
+  );
+};
 
 const Crash = styled.div`
   display: flex;
@@ -55,23 +79,23 @@ const Crash = styled.div`
   width: 700px;
   margin: auto;
   margin-bottom: 100px;
-    @media (max-width: 700px) {
-      flex-direction: column;
-      width: 100vw;
-    }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 
-
 const Container = styled.div`
-display: flex;
-width: 100vw;
-margin: auto;
-margin-bottom: 20px;
-transition: .7s;
-`
+  display: flex;
+  width: 100vw;
+  margin: auto;
+  margin-bottom: 20px;
+  transition: 0.7s;
+`;
 const Browser = styled.div`
   flex-direction: column;
-  margin: auto;`
+  margin: auto;
+`;
 
 const BrowserTitle = styled.div`
   display: flex;
@@ -83,7 +107,7 @@ const BrowserTitle = styled.div`
   border-bottom: 0px;
   background-color: #333333;
   width: 300px;
-  `
+`;
 const Circle = styled.div`
   display: flex;
   height: 10px;
@@ -92,7 +116,8 @@ const Circle = styled.div`
   margin-left: 5px;
   border-radius: 100%;
   color: white;
-  background-color: hotpink;`
+  background-color: hotpink;
+`;
 
 const BrowserWindow = styled.div`
   display: flex;
@@ -105,13 +130,14 @@ const BrowserWindow = styled.div`
   background-color: transparent;
   width: 300px;
   height: 250px;
- `
+`;
 
- const Details = styled.div`
-display: flex;
-flex-direction: column;
-margin: auto;
-justify-content: center;`
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+`;
 
 const Desc = styled.span`
   display: flex;
@@ -121,18 +147,20 @@ const Desc = styled.span`
   margin: auto;
   align-self: center;
   text-align: center;
-    @media (max-width: 500px) {
-      margin: auto;
-  }`
+  @media (max-width: 500px) {
+    margin: auto;
+  }
+`;
 
 const Icons = styled.span`
   font-size: 30px;
   width: 370px;
   padding-top: 20px;
   text-align: center;
-    @media (max-width: 500px) {
-      margin: auto;
-  }`
+  @media (max-width: 500px) {
+    margin: auto;
+  }
+`;
 
 const Links = styled.span`
   display: flex;
@@ -141,7 +169,8 @@ const Links = styled.span`
   margin: auto;
   margin-top: 20px;
   align-self: center;
-  text-align: center;`
+  text-align: center;
+`;
 
 const Button = styled.div`
   border: 1px solid #333333;
@@ -150,13 +179,14 @@ const Button = styled.div`
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
-    &:hover {
-      border-color: #333333;
-      background-color: #333333;
-      color: #00d8fe;
-      transition: .2s;
-      opacity: .8;
-    }`
+  &:hover {
+    border-color: #333333;
+    background-color: #333333;
+    color: #00d8fe;
+    transition: 0.2s;
+    opacity: 0.8;
+  }
+`;
 
 const GitButton = styled.div`
   border: 1px solid #333333;
@@ -168,12 +198,14 @@ const GitButton = styled.div`
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
-    &:hover {
-      border-color: #333333;
-      background-color: #333333;
-      color: #00d8fe;
-      transition: .2s;
-      opacity: .9;
-    }`
+  &:hover {
+    border-color: #333333;
+    background-color: #333333;
+    color: #00d8fe;
+    transition: 0.2s;
+    opacity: 0.9;
+  }
+`;
 
-export default PresentDay
+export default PresentDay;
+
